@@ -53,3 +53,8 @@ add event listener for when form submitted
   update average star rating
   reset form
 */
+
+
+//import helper fxn
+import {calculateStarAverage} from "./logic.js";
+
