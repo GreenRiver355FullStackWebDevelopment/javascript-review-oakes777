@@ -54,7 +54,11 @@ add event listener for when form submitted
   reset form
 */
 
-
 //import helper fxn
 import {calculateStarAverage} from "./logic.js";
+
+//select DOM elements -reviews, star display, form
+const reviewsSection = document.querySelector(".reviews");
+const starRatingDisplay = document.querySelector(".starRating");
+const form = document.querySelector("form");
 
