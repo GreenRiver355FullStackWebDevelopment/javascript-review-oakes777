@@ -23,3 +23,33 @@ const reviews = [
 /////////////////////////////////////////////////////////////////////
 
 //Your Code Below Here////
+/* 
+Pseudocode:
+import helper fxn
+select DOM elements
+  reviews
+  star rating display
+  review form
+function to render one review
+  container div
+  add user image
+  add sub-div
+    username
+    star rating
+    review text
+  add review to page
+loop through all reviews-forEach
+  call renderReview on each review object
+function to update average star rating
+  use imported helper to calculate
+  display result in starRating <p> tag
+call updateStarAverage fxn to show initial rating
+add event listener for when form submitted
+  prevent page from reloading
+  get input values from form
+  create new review object
+  add new review to array
+  render new review to page
+  update average star rating
+  reset form
+*/
