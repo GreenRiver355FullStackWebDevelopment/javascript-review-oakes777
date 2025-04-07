@@ -86,3 +86,18 @@ function renderReview(review) {
   container.appendChild(infoDiv);
   reviewsSection.append(container);
 }
+
+//loop thru all reviews(forEach) - renderView each review obj
+reviews.forEach(renderReview);
+//fxn update av star rating-use imported helper, display result
+function updateStarAverage() {
+  const avg = calculateStarAverage(reviews);
+  starRatingDisplay.textContent = `Star Rating: ${avg.toFixed(1)} \u2605`;
+}
+//call updateStarAverage fxn to show initial rating
+updateStarAverage();
+//add event listener
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  
