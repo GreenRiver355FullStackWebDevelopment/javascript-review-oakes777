@@ -62,3 +62,27 @@ const reviewsSection = document.querySelector(".reviews");
 const starRatingDisplay = document.querySelector(".starRating");
 const form = document.querySelector("form");
 
+//fxn to render 1 review - container div, add img, 
+// add subdiv - username, star rating, text
+//add review to page
+function renderReview(review) {
+  const container = document.createElement("div");
+  container.classList.add("review_container");
+  const img = document.createElement("img");
+  img.src = review.image;
+
+  const infoDiv = document.createElement("div");
+  const usernameP = document.createElement("p");
+  usernameP.textContent = review.username;
+  const starP = document.createElement("p");
+  starP.textContent = `\u2605 ${review.star}`;
+  const reviewP = document.createElement("p");
+  reviewP.textContent = review.review;
+
+  infoDiv.appendChild(usernameP);
+  infoDiv.appendChild(starP);
+  infoDiv.appendChild(reviewP);
+  container.appendChild(img);
+  container.appendChild(infoDiv);
+  reviewsSection.append(container);
+}
