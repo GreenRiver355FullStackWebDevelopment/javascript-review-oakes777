@@ -55,14 +55,14 @@ add event listener for when form submitted
 */
 
 //import helper fxn
-import {calculateStarAverage} from "./logic.js";
+import { calculateStarAverage } from "./logic.js";
 
 //select DOM elements -reviews, star display, form
 const reviewsSection = document.querySelector(".reviews");
 const starRatingDisplay = document.querySelector(".starRating");
 const form = document.querySelector("form");
 
-//fxn to render 1 review - container div, add img, 
+//fxn to render one review - container div, add img,
 // add subdiv - username, star rating, text
 //add review to page
 function renderReview(review) {
@@ -100,4 +100,27 @@ updateStarAverage();
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  
+  //added debugger to help follow this process
+  debugger;
+
+  const username = document.getElementById("username").value;
+  console.log("Username:", username);
+  const image = document.getElementById("image").value;
+  console.log("Image Path:", image);
+  const star = parseInt(document.getElementById("star").value);
+  console.log("Star Rating:", star);
+  const reviewText = document.getElementById("review").value;
+  console.log("Review Text:", reviewText);
+  const newReview = {
+    username,
+    image,
+    star,
+    review: reviewText,
+  };
+  console.log("New Review Object:", newReview);
+  reviews.push(newReview);
+  console.log("New review added. Total reviews now:", reviews.length);
+  renderReview(newReview);
+  updateStarAverage();
+  form.reset();
+});
