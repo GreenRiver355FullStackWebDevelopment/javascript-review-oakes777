@@ -54,6 +54,7 @@ add event listener for when form submitted
   reset form
 */
 
+//Coder: Jonathan Sule (used Prettier to format code)
 //import helper fxn
 import { calculateStarAverage } from "./logic.js";
 
@@ -101,7 +102,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   //added debugger to help follow this process
-  debugger;
+  // debugger;
 
   const username = document.getElementById("username").value;
   console.log("Username:", username);
